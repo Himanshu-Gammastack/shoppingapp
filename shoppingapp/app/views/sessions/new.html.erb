@@ -1,0 +1,23 @@
+<h1> Login </h1>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+<%= form_for @user, method: "POST",:url => { :action => :create } do |form| %>
+<div>
+  <%= form.label :email_id %><br>
+  <%= form.email_field :email_id %><br>
+</div>
+
+
+<div>
+  <%= form.label :password %><br>
+  <%= form.password_field :password %><br>
+</div>
+
+<div>
+   <%= form.submit "Login user" %>
+</div>
+
+<% end %>

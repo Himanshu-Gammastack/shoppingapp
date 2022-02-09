@@ -1,0 +1,9 @@
+<h1> Home Page </h1>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+<%= link_to "Create Account", "users/new" %>
+<br>
+<%= link_to "Login Account", "sessions/new" %>
